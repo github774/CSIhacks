@@ -1,7 +1,7 @@
 import { motion } from 'motion/react';
 import { useEffect, useState } from 'react';
 
-export default function LoadingScreen({ onComplete }: { onComplete: () => void }) {
+export default function LoadingScreen({ onComplete }: { onComplete: () => void; key?: string }) {
   const text = "CSIhacks";
   const [displayedText, setDisplayedText] = useState("");
 
