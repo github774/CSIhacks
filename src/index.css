@@ -1,13 +1,77 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&family=VT323&display=swap');
 @import "tailwindcss";
 
 @theme {
-  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
-  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
+  --font-sans: "VT323", monospace;
+  --font-mono: "VT323", monospace;
 }
 
-@media (min-width: 768px) {
-  * {
-    cursor: none !important;
+body {
+  background-color: #0b0b1a; 
+  color: #c5c6c7;
+  font-family: "VT323", monospace;
+  -webkit-font-smoothing: none;
+}
+
+*, *::before, *::after {
+  cursor: url('/pixel-cursor.svg') 0 0, auto !important;
+}
+
+.font-display {
+  font-family: "Press Start 2P", system-ui;
+  text-transform: uppercase;
+  -webkit-font-smoothing: none;
+}
+
+.star-bg {
+  background-color: #0b0b1a; 
+  background-image: 
+    /* Clouds layer */
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='600' height='600'%3E%3Cg fill='rgba(255,255,255,0.03)'%3E%3Crect x='50' y='80' width='120' height='20'/%3E%3Crect x='70' y='60' width='80' height='20'/%3E%3Crect x='90' y='40' width='40' height='20'/%3E%3Crect x='300' y='250' width='160' height='20'/%3E%3Crect x='320' y='230' width='120' height='20'/%3E%3Crect x='360' y='210' width='40' height='20'/%3E%3Crect x='150' y='400' width='100' height='20'/%3E%3Crect x='170' y='380' width='60' height='20'/%3E%3C/g%3E%3C/svg%3E"),
+    /* Pixel stars layer — cross / plus shapes */
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200'%3E%3Cg%3E%3Crect x='19' y='16' width='2' height='8' fill='%23fff' opacity='.85'/%3E%3Crect x='16' y='19' width='8' height='2' fill='%23fff' opacity='.85'/%3E%3Crect x='79' y='56' width='2' height='6' fill='%2338bdf8' opacity='.6'/%3E%3Crect x='77' y='58' width='6' height='2' fill='%2338bdf8' opacity='.6'/%3E%3Crect x='139' y='96' width='2' height='8' fill='%23fff' opacity='.5'/%3E%3Crect x='136' y='99' width='8' height='2' fill='%23fff' opacity='.5'/%3E%3Crect x='49' y='136' width='2' height='10' fill='%23f43f5e' opacity='.35'/%3E%3Crect x='45' y='140' width='10' height='2' fill='%23f43f5e' opacity='.35'/%3E%3Crect x='169' y='26' width='2' height='6' fill='%23fff' opacity='.7'/%3E%3Crect x='167' y='28' width='6' height='2' fill='%23fff' opacity='.7'/%3E%3Crect x='109' y='166' width='2' height='6' fill='%23d946ef' opacity='.4'/%3E%3Crect x='107' y='168' width='6' height='2' fill='%23d946ef' opacity='.4'/%3E%3C/g%3E%3C/svg%3E");
+  background-position: 0 0, 0 0;
+  animation: pixelParallax 80s linear infinite;
+}
+
+@keyframes pixelParallax {
+  from {
+    background-position: 0px 0px, 0px 0px;
   }
+  to {
+    background-position: 3000px 0px, -1500px 1500px;
+  }
+}
+
+.pixel-shadow {
+  text-shadow: 4px 4px 0px #e11d48;
+}
+
+.pixel-shadow-blue {
+  text-shadow: 4px 4px 0px #0284c7;
+}
+
+.button-pixel {
+  position: relative;
+  border-radius: 0;
+}
+.button-pixel::before {
+  content: "";
+  position: absolute;
+  top: -4px;
+  bottom: -4px;
+  left: 4px;
+  right: 4px;
+  background: inherit;
+  z-index: -1;
+}
+.button-pixel::after {
+  content: "";
+  position: absolute;
+  top: 4px;
+  bottom: 4px;
+  left: -4px;
+  right: -4px;
+  background: inherit;
+  z-index: -1;
 }

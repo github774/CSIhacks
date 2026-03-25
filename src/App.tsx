@@ -19,7 +19,7 @@ export default function App() {
   const [isLoading, setIsLoading] = useState(true);
 
   return (
-    <div className="min-h-screen bg-[#1e232d] text-white font-sans selection:bg-sky-500/30">
+    <div className="min-h-screen star-bg text-gray-200 font-sans selection:bg-pink-500/30">
       <CustomCursor />
       
       <AnimatePresence mode="wait">

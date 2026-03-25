@@ -22,7 +22,7 @@ export default function LoadingScreen({ onComplete }: { onComplete: () => void; 
 
   return (
     <motion.div
-      className="fixed inset-0 z-[9999] bg-[#1e232d] flex items-center justify-center"
+      className="fixed inset-0 z-[9999] bg-[#050510] star-bg flex flex-col items-center justify-center"
       initial={{ opacity: 1 }}
       exit={{ 
         opacity: 0, 
@@ -31,13 +31,22 @@ export default function LoadingScreen({ onComplete }: { onComplete: () => void; 
         transition: { duration: 0.6, ease: "easeInOut" }
       }}
     >
-      <div className="text-5xl md:text-7xl font-mono font-bold text-white flex items-center">
-        <span className="text-sky-400 mr-4 md:mr-6">&gt;</span>
+      <div className="mb-8 w-24 h-24 md:w-32 md:h-32 rounded-xl overflow-hidden shadow-[0_0_40px_rgba(225,29,72,0.3)] pointer-events-none">
+         <img 
+          src="/pixel_character.png" 
+          alt="Loading Character" 
+          className="w-full h-full object-cover pixelated"
+          style={{ imageRendering: 'pixelated' }}
+         />
+      </div>
+
+      <div className="text-3xl md:text-5xl font-display text-white flex items-center pixel-shadow">
+        <span className="text-rose-500 mr-4 md:mr-6">&gt;</span>
         <span>{displayedText}</span>
         <motion.span
           animate={{ opacity: [1, 0] }}
           transition={{ duration: 0.8, repeat: Infinity, ease: "linear" }}
-          className="inline-block w-5 md:w-8 h-[0.8em] bg-sky-400 ml-2 md:ml-4"
+          className="inline-block w-4 md:w-6 h-[1.2em] bg-rose-500 ml-2 md:ml-4"
         />
       </div>
     </motion.div>
