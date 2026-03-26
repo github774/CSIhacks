@@ -15,10 +15,10 @@ export default function CustomCursor() {
     let frameObj = 0;
 
     const colors = [
-      'rgba(244, 63, 94, ',
-      'rgba(56, 189, 248, ',
-      'rgba(217, 70, 239, ',
-      'rgba(250, 204, 21, ',
+      'rgba(255, 255, 255, ', 
+      'rgba(20, 20, 25, ',   
+      'rgba(244, 63, 94, ',  
+      'rgba(225, 29, 72, ',  
     ];
 
     const resize = () => {
@@ -29,9 +29,13 @@ export default function CustomCursor() {
     resize();
 
     const onMouseMove = (e: MouseEvent) => {
+      // Offset to trail from the back of the 24x24 cursor
+      const offsetX = 12;
+      const offsetY = 12;
+
       if (mouseX !== -100 && mouseY !== -100) {
-        const dx = e.clientX - mouseX;
-        const dy = e.clientY - mouseY;
+        const dx = (e.clientX + offsetX) - mouseX;
+        const dy = (e.clientY + offsetY) - mouseY;
         const dist = Math.sqrt(dx * dx + dy * dy);
         const steps = Math.max(1, Math.floor(dist / 20)); 
         
@@ -44,11 +48,11 @@ export default function CustomCursor() {
           });
         }
       } else {
-        points.push({ x: e.clientX, y: e.clientY, age: 0, colorIndex: Math.floor(Math.random() * colors.length) });
+        points.push({ x: e.clientX + offsetX, y: e.clientY + offsetY, age: 0, colorIndex: Math.floor(Math.random() * colors.length) });
       }
 
-      mouseX = e.clientX;
-      mouseY = e.clientY;
+      mouseX = e.clientX + offsetX;
+      mouseY = e.clientY + offsetY;
     };
     
     window.addEventListener('mousemove', onMouseMove);

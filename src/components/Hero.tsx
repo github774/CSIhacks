@@ -18,8 +18,8 @@ export default function Hero() {
         {/* Pixel Character */}
         <div className="mb-12 relative w-48 h-48 md:w-64 md:h-64 rounded-xl overflow-hidden shadow-[0_0_40px_rgba(225,29,72,0.3)]">
            <img 
-            src="/pixel_character.png" 
-            alt="Pixel Character" 
+            src="/pixel_coder_main.png" 
+            alt="Red Hoodie Coder" 
             className="w-full h-full object-cover pixelated"
             style={{ imageRendering: 'pixelated' }}
            />

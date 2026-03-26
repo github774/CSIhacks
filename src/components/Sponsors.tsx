@@ -9,41 +9,44 @@ export default function Sponsors() {
             $ vi <span className="font-bold text-white">PRIZES.yml</span>
           </div>
 
-          <div className="flex flex-wrap items-end justify-center gap-8 md:gap-12 lg:gap-16">
+          <div className="flex flex-col items-center gap-24">
             
-            {/* 1st Place */}
-            <div className="flex flex-col items-center w-32 md:w-40">
-              <img src="/pixel_trophy.png" alt="1st Place Trophy" className="w-24 h-24 md:w-32 md:h-32 mb-6 object-cover" style={{ imageRendering: 'pixelated' }} />
-              <h3 className="text-white font-display text-sm md:text-base text-center mb-2">1ST PLACE</h3>
-              <p className="text-rose-400 font-display text-2xl">TBD</p>
+            {/* Pyramid Level 1: 1st Place */}
+            <div className="flex flex-col items-center">
+              <div className="relative mb-8">
+                <div className="absolute inset-0 bg-rose-500/30 blur-3xl rounded-full"></div>
+                <img src="/pixel_coder_trophy.png" alt="1st Place Coder" className="relative w-44 h-44 md:w-64 md:h-64 object-contain pixelated" style={{ imageRendering: 'pixelated' }} />
+              </div>
+              <h3 className="text-white font-display text-xl md:text-2xl text-center mb-2">1ST PLACE</h3>
+              <p className="text-rose-400 font-display text-4xl md:text-5xl">TBD</p>
             </div>
 
-            {/* 2nd Place */}
-            <div className="flex flex-col items-center w-32 md:w-40">
-              <img src="/pixel_trophy.png" alt="2nd Place Trophy" className="w-20 h-20 md:w-24 md:h-24 mb-6 object-cover opacity-90" style={{ imageRendering: 'pixelated' }} />
-              <h3 className="text-gray-300 font-display text-xs md:text-sm text-center mb-2">2ND PLACE</h3>
-              <p className="text-purple-400 font-display text-lg">TBD</p>
+            {/* Pyramid Level 2: 2nd & 3rd */}
+            <div className="flex flex-wrap items-end justify-center gap-20 md:gap-32">
+              <div className="flex flex-col items-center w-40 md:w-56">
+                <img src="/pixel_trophy.png" alt="2nd Place Trophy" className="w-24 h-24 md:w-32 md:h-32 mb-6 object-cover pixelated opacity-90" style={{ imageRendering: 'pixelated' }} />
+                <h3 className="text-gray-300 font-display text-sm md:text-base text-center mb-2 uppercase tracking-tighter">2ND PLACE</h3>
+                <p className="text-purple-400 font-display text-2xl md:text-3xl">TBD</p>
+              </div>
+              <div className="flex flex-col items-center w-40 md:w-56">
+                <img src="/pixel_trophy.png" alt="3rd Place Trophy" className="w-20 h-20 md:w-28 md:h-28 mb-6 object-cover pixelated opacity-80" style={{ imageRendering: 'pixelated' }} />
+                <h3 className="text-gray-300 font-display text-sm md:text-base text-center mb-2 uppercase tracking-tighter">3RD PLACE</h3>
+                <p className="text-orange-400 font-display text-2xl md:text-3xl">TBD</p>
+              </div>
             </div>
 
-            {/* 3rd Place */}
-            <div className="flex flex-col items-center w-32 md:w-40">
-              <img src="/pixel_trophy.png" alt="3rd Place Trophy" className="w-16 h-16 md:w-20 md:h-20 mb-6 object-cover opacity-80" style={{ imageRendering: 'pixelated' }} />
-              <h3 className="text-gray-300 font-display text-xs md:text-sm text-center mb-2">3RD PLACE</h3>
-              <p className="text-orange-400 font-display text-lg">TBD</p>
-            </div>
-
-            {/* 4th Place */}
-            <div className="flex flex-col items-center w-32 md:w-40">
-              <img src="/pixel_trophy.png" alt="4th Place Trophy" className="w-12 h-12 md:w-16 md:h-16 mb-4 object-cover opacity-70" style={{ imageRendering: 'pixelated' }} />
-              <h3 className="text-gray-400 font-display text-[10px] md:text-xs text-center mb-2">4TH PLACE</h3>
-              <p className="text-cyan-400 font-display text-base">TBD</p>
-            </div>
-
-            {/* 5th Place */}
-            <div className="flex flex-col items-center w-32 md:w-40">
-              <img src="/pixel_trophy.png" alt="5th Place Trophy" className="w-12 h-12 md:w-16 md:h-16 mb-4 object-cover opacity-70" style={{ imageRendering: 'pixelated' }} />
-              <h3 className="text-gray-400 font-display text-[10px] md:text-xs text-center mb-2">5TH PLACE</h3>
-              <p className="text-green-400 font-display text-base">TBD</p>
+            {/* Pyramid Level 3: 4th & 5th */}
+            <div className="flex flex-wrap items-end justify-center gap-12 md:gap-24">
+              <div className="flex flex-col items-center w-36 md:w-48">
+                <img src="/pixel_trophy.png" alt="4th Place Trophy" className="w-16 h-16 md:w-20 md:h-20 mb-4 object-cover pixelated opacity-70" style={{ imageRendering: 'pixelated' }} />
+                <h3 className="text-gray-400 font-display text-xs md:text-sm text-center mb-2 uppercase tracking-tighter">4TH PLACE</h3>
+                <p className="text-cyan-400 font-display text-xl">TBD</p>
+              </div>
+              <div className="flex flex-col items-center w-36 md:w-48">
+                <img src="/pixel_trophy.png" alt="5th Place Trophy" className="w-16 h-16 md:w-20 md:h-20 mb-4 object-cover pixelated opacity-70" style={{ imageRendering: 'pixelated' }} />
+                <h3 className="text-gray-400 font-display text-xs md:text-sm text-center mb-2 uppercase tracking-tighter">5TH PLACE</h3>
+                <p className="text-green-400 font-display text-xl">TBD</p>
+              </div>
             </div>
 
           </div>
