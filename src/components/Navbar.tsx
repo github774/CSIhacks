@@ -15,16 +15,23 @@ export default function Navbar() {
     <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${scrolled ? 'bg-[#0b0b1a]/90 backdrop-blur-md py-4 shadow-lg border-b border-white/10' : 'bg-transparent py-6'}`}>
       <div className="max-w-7xl mx-auto px-6 flex items-center justify-between font-display text-sm">
         {/* Logo */}
-        <div className="flex items-center gap-2">
+        <a 
+          href="#" 
+          onClick={(e) => {
+            e.preventDefault();
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+          }}
+          className="flex items-center gap-2 hover:opacity-80 transition-opacity cursor-pointer"
+        >
           <span className="text-white">CSI</span>
           <span className="text-rose-500">hacks</span>
-        </div>
+        </a>
         
         {/* Links */}
         <div className="hidden md:flex items-center gap-8 text-white">
           <a href="#schedule" className="hover:text-rose-400 transition-colors">SCHEDULE</a>
-          <a href="#tracks" className="hover:text-rose-400 transition-colors">TRACKS</a>
-          <a href="#prizes" className="hover:text-rose-400 transition-colors">PRIZES</a>
+          <a href="#about" className="hover:text-rose-400 transition-colors">ABOUT</a>
+          <a href="#prizes" className="hover:text-rose-400 transition-colors">TRACKS</a>
           <a href="#faq" className="hover:text-rose-400 transition-colors">FAQ</a>
         </div>
         

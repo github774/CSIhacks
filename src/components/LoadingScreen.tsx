@@ -26,18 +26,25 @@ export default function LoadingScreen({ onComplete }: { onComplete: () => void; 
       initial={{ opacity: 1 }}
       exit={{ 
         opacity: 0, 
-        scale: 1.1, 
-        filter: "blur(10px)",
-        transition: { duration: 0.6, ease: "easeInOut" }
+        transition: { duration: 0.8, ease: "easeInOut" } 
       }}
     >
-      <div className="mb-8 w-24 h-24 md:w-32 md:h-32 rounded-xl overflow-hidden shadow-[0_0_40px_rgba(225,29,72,0.3)] pointer-events-none">
-         <img 
-          src="/pixel_coder_main.png" 
-          alt="Red Hoodie Coder" 
-          className="w-full h-full object-cover pixelated"
-          style={{ imageRendering: 'pixelated' }}
-         />
+      <div className="mb-8 relative group">
+        {/* Subtle Background Glow */}
+        <div className="absolute inset-x-0 top-1/2 -translate-y-1/2 h-16 bg-rose-500/10 blur-[40px] rounded-full scale-150 pointer-events-none"></div>
+        
+        <motion.div 
+          animate={{ y: [0, -8, 0] }}
+          transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
+          className="relative w-24 h-24 md:w-32 md:h-32 flex items-center justify-center pointer-events-none"
+        >
+           <img 
+            src="/pixel_coder_main.png" 
+            alt="Red Hoodie Coder" 
+            className="w-full h-full object-contain pixelated drop-shadow-[0_5px_15px_rgba(0,0,0,0.5)]"
+            style={{ imageRendering: 'pixelated' }}
+           />
+        </motion.div>
       </div>
 
       <div className="text-3xl md:text-5xl font-display text-white flex items-center pixel-shadow">

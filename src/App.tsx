@@ -30,7 +30,7 @@ export default function App() {
             key="content"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
-            transition={{ duration: 0.8, ease: "easeOut" }}
+            transition={{ duration: 1, ease: "easeOut", delay: 0.2 }}
           >
             <Navbar />
             <Hero />

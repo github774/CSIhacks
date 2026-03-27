@@ -1,60 +1,94 @@
+import { Star, Brain, DollarSign, Cpu, Palette } from 'lucide-react';
+
 export default function Sponsors() {
+  const tracks = [
+    {
+      id: '01',
+      title: 'Best Overall',
+      description: 'The grand prize. Show us something we\'ve never seen before — the project that makes judges forget about every other demo.',
+      icon: <Star className="w-6 h-6 text-rose-500" />
+    },
+    {
+      id: '02',
+      title: 'Best AI/ML',
+      description: 'Push the boundaries of machine intelligence. From fine-tuned models to novel architectures — build something that thinks.',
+      icon: <Brain className="w-6 h-6 text-cyan-400" />
+    },
+    {
+      id: '03',
+      title: 'Best Fintech',
+      description: 'Reimagine money, payments, or financial access. Build tools that make the financial world more open, fair, or efficient.',
+      icon: <DollarSign className="w-6 h-6 text-yellow-400" />
+    },
+    {
+      id: '04',
+      title: 'Best Hardware',
+      description: 'Atoms over bits. Bring circuits, sensors, and physical builds. If it blinks, moves, or measures — we want to see it.',
+      icon: <Cpu className="w-6 h-6 text-fuchsia-400" />
+    },
+    {
+      id: '05',
+      title: 'Best UI/UX Design',
+      description: 'Where form meets function. Build a seamless user experience with intuitive design and exceptional aesthetics.',
+      icon: <Palette className="w-6 h-6 text-green-400" />
+    }
+  ];
+
   return (
     <section id="prizes" className="py-24 px-6 relative z-10 border-t border-white/5">
       <div className="max-w-6xl mx-auto space-y-32">
         
-        {/* Prizes Section */}
+        {/* Tracks Section */}
         <div>
-          <div className="font-mono text-xl md:text-2xl text-gray-300 mb-16 text-center">
-            $ vi <span className="font-bold text-white">PRIZES.yml</span>
+          <div className="text-center mb-16">
+            <h2 className="text-5xl md:text-7xl font-display mb-6 text-white pixel-shadow">
+              FIVE WAYS TO WIN.
+            </h2>
+            <p className="text-xl md:text-2xl text-rose-300 font-mono italic max-w-2xl mx-auto">
+              Pick a track that excites you. Every project competes for Best Overall too.
+            </p>
           </div>
 
-          <div className="flex flex-col items-center gap-24">
-            
-            {/* Pyramid Level 1: 1st Place */}
-            <div className="flex flex-col items-center">
-              <div className="relative mb-8">
-                <div className="absolute inset-0 bg-rose-500/30 blur-3xl rounded-full"></div>
-                <img src="/pixel_coder_trophy.png" alt="1st Place Coder" className="relative w-44 h-44 md:w-64 md:h-64 object-contain pixelated" style={{ imageRendering: 'pixelated' }} />
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
+            {tracks.slice(0, 3).map((track) => (
+              <div key={track.id} className="bg-[#0b0c16]/50 border-2 border-white/10 p-8 relative group hover:border-white/30 transition-all duration-300 rounded-xl backdrop-blur-sm">
+                <div className="absolute top-0 right-0 p-4 text-xs font-mono text-gray-500 tracking-widest">
+                  TRACK {track.id}
+                </div>
+                <div className="w-12 h-12 bg-white/5 rounded-lg flex items-center justify-center mb-6 border border-white/10 group-hover:scale-110 transition-transform">
+                  {track.icon}
+                </div>
+                <h3 className="text-2xl font-display text-white mb-4 tracking-tight">
+                  {track.title}
+                </h3>
+                <p className="text-gray-400 font-mono text-lg leading-relaxed">
+                  {track.description}
+                </p>
               </div>
-              <h3 className="text-white font-display text-xl md:text-2xl text-center mb-2">1ST PLACE</h3>
-              <p className="text-rose-400 font-display text-4xl md:text-5xl">TBD</p>
-            </div>
-
-            {/* Pyramid Level 2: 2nd & 3rd */}
-            <div className="flex flex-wrap items-end justify-center gap-20 md:gap-32">
-              <div className="flex flex-col items-center w-40 md:w-56">
-                <img src="/pixel_trophy.png" alt="2nd Place Trophy" className="w-24 h-24 md:w-32 md:h-32 mb-6 object-cover pixelated opacity-90" style={{ imageRendering: 'pixelated' }} />
-                <h3 className="text-gray-300 font-display text-sm md:text-base text-center mb-2 uppercase tracking-tighter">2ND PLACE</h3>
-                <p className="text-purple-400 font-display text-2xl md:text-3xl">TBD</p>
-              </div>
-              <div className="flex flex-col items-center w-40 md:w-56">
-                <img src="/pixel_trophy.png" alt="3rd Place Trophy" className="w-20 h-20 md:w-28 md:h-28 mb-6 object-cover pixelated opacity-80" style={{ imageRendering: 'pixelated' }} />
-                <h3 className="text-gray-300 font-display text-sm md:text-base text-center mb-2 uppercase tracking-tighter">3RD PLACE</h3>
-                <p className="text-orange-400 font-display text-2xl md:text-3xl">TBD</p>
-              </div>
-            </div>
-
-            {/* Pyramid Level 3: 4th & 5th */}
-            <div className="flex flex-wrap items-end justify-center gap-12 md:gap-24">
-              <div className="flex flex-col items-center w-36 md:w-48">
-                <img src="/pixel_trophy.png" alt="4th Place Trophy" className="w-16 h-16 md:w-20 md:h-20 mb-4 object-cover pixelated opacity-70" style={{ imageRendering: 'pixelated' }} />
-                <h3 className="text-gray-400 font-display text-xs md:text-sm text-center mb-2 uppercase tracking-tighter">4TH PLACE</h3>
-                <p className="text-cyan-400 font-display text-xl">TBD</p>
-              </div>
-              <div className="flex flex-col items-center w-36 md:w-48">
-                <img src="/pixel_trophy.png" alt="5th Place Trophy" className="w-16 h-16 md:w-20 md:h-20 mb-4 object-cover pixelated opacity-70" style={{ imageRendering: 'pixelated' }} />
-                <h3 className="text-gray-400 font-display text-xs md:text-sm text-center mb-2 uppercase tracking-tighter">5TH PLACE</h3>
-                <p className="text-green-400 font-display text-xl">TBD</p>
-              </div>
-            </div>
-
+            ))}
           </div>
-          
-          <div className="mt-16 text-center text-gray-400 font-mono text-sm uppercase tracking-widest">
-            * Prizes will be announced soon.
+
+          {/* Bottom row centered */}
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+            {tracks.slice(3).map((track) => (
+              <div key={track.id} className="bg-[#0b0c16]/50 border-2 border-white/10 p-8 relative group hover:border-white/30 transition-all duration-300 rounded-xl backdrop-blur-sm">
+                <div className="absolute top-0 right-0 p-4 text-xs font-mono text-gray-500 tracking-widest">
+                  TRACK {track.id}
+                </div>
+                <div className="w-12 h-12 bg-white/5 rounded-lg flex items-center justify-center mb-6 border border-white/10 group-hover:scale-110 transition-transform">
+                  {track.icon}
+                </div>
+                <h3 className="text-2xl font-display text-white mb-4 tracking-tight">
+                  {track.title}
+                </h3>
+                <p className="text-gray-400 font-mono text-lg leading-relaxed">
+                  {track.description}
+                </p>
+              </div>
+            ))}
           </div>
         </div>
+
 
         {/* Sponsors Section */}
         <div id="sponsors" className="pt-16">

@@ -1,3 +1,4 @@
+import { motion } from 'motion/react';
 import { ExternalLink } from 'lucide-react';
 
 export default function Hero() {
@@ -16,13 +17,22 @@ export default function Hero() {
         </div>
 
         {/* Pixel Character */}
-        <div className="mb-12 relative w-48 h-48 md:w-64 md:h-64 rounded-xl overflow-hidden shadow-[0_0_40px_rgba(225,29,72,0.3)]">
-           <img 
-            src="/pixel_coder_main.png" 
-            alt="Red Hoodie Coder" 
-            className="w-full h-full object-cover pixelated"
-            style={{ imageRendering: 'pixelated' }}
-           />
+        <div className="mb-12 relative group">
+          {/* Subtle Background Glow */}
+          <div className="absolute inset-x-0 top-1/2 -translate-y-1/2 h-32 bg-rose-500/20 blur-[80px] rounded-full scale-150 pointer-events-none"></div>
+          
+          <motion.div 
+            animate={{ y: [0, -15, 0] }}
+            transition={{ duration: 5, repeat: Infinity, ease: "easeInOut" }}
+            className="relative w-48 h-48 md:w-64 md:h-64 flex items-center justify-center pointer-events-none"
+          >
+             <img 
+              src="/pixel_coder_main.png" 
+              alt="Red Hoodie Coder" 
+              className="w-full h-full object-contain pixelated drop-shadow-[0_10px_20px_rgba(0,0,0,0.5)]"
+              style={{ imageRendering: 'pixelated' }}
+             />
+          </motion.div>
         </div>
 
         {/* Action Button */}

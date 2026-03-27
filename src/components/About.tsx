@@ -1,6 +1,6 @@
 export default function About() {
   return (
-    <section id="tracks" className="py-24 px-6 relative z-10 border-t border-white/5">
+    <section id="about" className="py-24 px-6 relative z-10 border-t border-white/5">
       <div className="max-w-5xl mx-auto space-y-16">
         
         {/* Terminal Header */}
