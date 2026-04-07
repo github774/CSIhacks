@@ -103,10 +103,38 @@ export default function Sponsors() {
             Sponsors will be announced soon!
           </p>
           
-          {/* TBD Placeholder */}
+          {/* Sponsor Tiers */}
           <div className="space-y-20 text-center font-display">
-            <div className="opacity-50">
-              <h3 className="text-xl md:text-2xl text-gray-400 mb-8 border border-dashed border-gray-600 inline-block px-8 py-4">TBA</h3>
+            {/* Diamond Tier */}
+            <div>
+              <h3 className="text-2xl md:text-3xl text-cyan-300 mb-8">Diamond</h3>
+              <div className="opacity-50">
+                <div className="text-xl md:text-2xl text-gray-400 border border-dashed border-cyan-800 inline-block px-12 py-6">TBA</div>
+              </div>
+            </div>
+
+            {/* Gold Tier */}
+            <div>
+              <h3 className="text-xl md:text-2xl text-yellow-400 mb-6">Gold</h3>
+              <div className="opacity-50">
+                <div className="text-lg md:text-xl text-gray-400 border border-dashed border-yellow-800 inline-block px-10 py-5">TBA</div>
+              </div>
+            </div>
+
+            {/* Silver Tier */}
+            <div>
+              <h3 className="text-lg md:text-xl text-gray-300 mb-6">Silver</h3>
+              <div className="opacity-50">
+                <div className="text-base md:text-lg text-gray-400 border border-dashed border-gray-600 inline-block px-8 py-4">TBA</div>
+              </div>
+            </div>
+
+            {/* Supporter Tier */}
+            <div>
+              <h3 className="text-base md:text-lg text-emerald-400 mb-6">Supporter</h3>
+              <div className="opacity-50">
+                <div className="text-sm md:text-base text-gray-400 border border-dashed border-emerald-800 inline-block px-6 py-3">TBA</div>
+              </div>
             </div>
           </div>
         </div>
