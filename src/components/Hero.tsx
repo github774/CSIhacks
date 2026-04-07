@@ -36,14 +36,17 @@ export default function Hero() {
         </div>
 
         {/* Action Button */}
-        <button 
+        <a 
+          href="https://luma.com/ptgsw4bj"
+          target="_blank"
+          rel="noopener noreferrer"
           className="bg-white/90 hover:bg-white text-rose-500 px-8 py-4 font-mono text-2xl flex items-center gap-3 transition-transform hover:scale-105 active:scale-95 button-pixel"
         >
           <div className="w-6 h-6 bg-rose-500 flex items-center justify-center rounded-sm">
              <div className="w-3 h-3 bg-white rounded-sm"></div>
           </div>
           Apply Here!
-        </button>
+        </a>
 
         {/* Location / Time Info */}
         <div className="mt-16 flex flex-col items-center gap-2 text-lg text-gray-300 font-mono text-center">
