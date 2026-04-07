@@ -47,8 +47,8 @@ export default function Hero() {
 
         {/* Location / Time Info */}
         <div className="mt-16 flex flex-col items-center gap-2 text-lg text-gray-300 font-mono text-center">
-           <p>TBD Date • TBD Time</p>
-           <p>TBD Location, City, State</p>
+           <p>June 20th</p>
+           <p>Zoho Corporation, Pleasanton, CA</p>
         </div>
       </div>
     </div>
