@@ -36,7 +36,13 @@ export default function Navbar() {
         </div>
         
         {/* Right Info */}
-        <div className="hidden lg:flex items-center gap-4 text-white text-xs text-right leading-tight">
+        <a
+          href="https://californiasteminnovators.org/"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="California Stem Innovators — opens in new tab"
+          className="hidden lg:flex items-center gap-4 text-white text-xs text-right leading-tight hover:text-rose-400 transition-colors"
+        >
           <div>
             Powered by<br />CSI
           </div>
@@ -44,7 +50,7 @@ export default function Navbar() {
             {/* Simple Box Icon for Logo */}
             <div className="w-4 h-4 border-2 border-white rounded-sm"></div>
           </div>
-        </div>
+        </a>
       </div>
     </nav>
   );

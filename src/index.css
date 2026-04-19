@@ -25,15 +25,15 @@ body {
 
 .star-bg {
   /* Dynamic 16-bit Sprited Parallax Background */
-  background-image: 
+  background-image:
     url("/bg-clouds.png"),
     url("/bg-moon.png"),
     url("/bg-stars.svg"),
     linear-gradient(180deg, #181c3c 0%, #292850 70%, #3e3860 100%);
-  
+
   /* Layer 1: Clouds (repeat x) | Layer 2: Moon | Layer 3: Stars | Layer 4: Gradient */
   background-repeat: repeat-x, no-repeat, repeat, no-repeat;
-  
+
   /* Scale the clouds up so they look like massive 8-bit hills, moon is 400x400 */
   background-size: 1000px auto, 350px 350px, 1000px 1000px, 100% 100%;
   
