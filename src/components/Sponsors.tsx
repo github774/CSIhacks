@@ -140,7 +140,14 @@ export default function Sponsors() {
           logo: '/sponsors/aops.svg',
           logoClass: 'max-h-12 md:max-h-14'
         },
-        { kind: 'tba' },
+        {
+          kind: 'logo',
+          name: 'InterviewBuddy',
+          href: 'https://interviewbuddy.net/',
+          logo: '/sponsors/interviewbuddy.svg',
+          logoClass: 'max-h-10 md:max-h-12',
+          bgClass: 'bg-white hover:bg-gray-100'
+        },
         { kind: 'tba' }
       ]
     }
