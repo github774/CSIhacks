@@ -80,7 +80,7 @@ export default function Sponsors() {
       dashedClass: 'border-cyan-500/30',
       slotHeight: 'h-40 md:h-44',
       columns: 'grid-cols-1 md:grid-cols-2',
-      slots: [{ kind: 'tba' }, { kind: 'tba' }]
+      slots: [{ kind: 'tba' }, { kind: 'tba' }, { kind: 'tba' }, { kind: 'tba' }]
     },
     {
       id: 'gold',
@@ -93,12 +93,19 @@ export default function Sponsors() {
       dashedClass: 'border-yellow-500/30',
       slotHeight: 'h-32 md:h-36',
       columns: 'grid-cols-1 md:grid-cols-3',
-      slots: [{ kind: 'tba' }, { kind: 'tba' }, { kind: 'tba' }]
+      slots: [
+        { kind: 'tba' },
+        { kind: 'tba' },
+        { kind: 'tba' },
+        { kind: 'tba' },
+        { kind: 'tba' },
+        { kind: 'tba' }
+      ]
     },
     {
       id: 'silver',
       name: 'Silver',
-      price: '$350',
+      price: '$500',
       accent: 'gray',
       borderClass: 'border-gray-300/50',
       textClass: 'text-gray-200',
@@ -116,6 +123,24 @@ export default function Sponsors() {
           bgClass: 'bg-white hover:bg-gray-100',
           textClass: 'text-[#151515]'
         },
+        {
+          kind: 'logo',
+          name: 'PCBWay',
+          href: 'https://www.pcbway.com/',
+          logo: '/sponsors/pcbway.png',
+          logoClass: 'max-h-16 md:max-h-20',
+          bgClass: 'bg-white hover:bg-gray-100'
+        },
+        {
+          kind: 'logo',
+          name: 'Featherless.ai',
+          href: 'https://featherless.ai/',
+          logo: '/sponsors/featherless.svg',
+          logoClass: 'max-h-10 md:max-h-12',
+          bgClass: 'bg-white hover:bg-gray-100'
+        },
+        { kind: 'tba' },
+        { kind: 'tba' },
         { kind: 'tba' },
         { kind: 'tba' },
         { kind: 'tba' }
@@ -148,6 +173,16 @@ export default function Sponsors() {
           logoClass: 'max-h-10 md:max-h-12',
           bgClass: 'bg-white hover:bg-gray-100'
         },
+        {
+          kind: 'logo',
+          name: 'Tavily',
+          href: 'https://tavily.com/',
+          logo: '/sponsors/tavily.svg',
+          logoClass: 'max-h-10 md:max-h-12',
+          bgClass: 'bg-white hover:bg-gray-100'
+        },
+        { kind: 'tba' },
+        { kind: 'tba' },
         { kind: 'tba' }
       ]
     }

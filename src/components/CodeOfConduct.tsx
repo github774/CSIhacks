@@ -33,7 +33,7 @@ export default function CodeOfConduct() {
             Anti-Harassment Policy
           </h2>
           <p className="font-mono text-gray-400 text-base mb-12">
-            Effective: June 20th, 2026 &bull; csihacks.com
+            Effective: June 27th, 2026 &bull; csihacks.com
           </p>
 
           <div className="space-y-10 font-mono text-lg leading-relaxed">
