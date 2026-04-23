@@ -34,23 +34,35 @@ export default function Navbar() {
           <a href="#prizes" className="hover:text-rose-400 transition-colors">TRACKS</a>
           <a href="#faq" className="hover:text-rose-400 transition-colors">FAQ</a>
         </div>
-        
-        {/* Right Info */}
-        <a
-          href="https://californiasteminnovators.org/"
-          target="_blank"
-          rel="noopener noreferrer"
-          aria-label="California Stem Innovators — opens in new tab"
-          className="hidden lg:flex items-center gap-4 text-white text-xs text-right leading-tight hover:text-rose-400 transition-colors"
-        >
-          <div>
-            Powered by<br />CSI
-          </div>
-          <div className="w-8 h-8 bg-white/10 rounded-full flex items-center justify-center">
-            {/* Simple Box Icon for Logo */}
-            <div className="w-4 h-4 border-2 border-white rounded-sm"></div>
-          </div>
-        </a>
+
+        {/* Right-side cluster: Donate button + Powered by CSI */}
+        <div className="flex items-center gap-4 lg:gap-6">
+          <a
+            href="https://hcb.hackclub.com/donations/start/csi-hacks"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Donate to CSIhacks — opens in new tab"
+            className="bg-rose-500 hover:bg-rose-400 text-white text-xs md:text-sm px-4 py-2 md:px-5 md:py-2.5 transition-colors"
+          >
+            DONATE
+          </a>
+
+          {/* Powered by CSI */}
+          <a
+            href="https://californiasteminnovators.org/"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="California Stem Innovators — opens in new tab"
+            className="hidden lg:flex items-center gap-4 text-white text-xs text-right leading-tight hover:text-rose-400 transition-colors"
+          >
+            <div>
+              Powered by<br />CSI
+            </div>
+            <div className="w-8 h-8 bg-white/10 rounded-full flex items-center justify-center">
+              <div className="w-4 h-4 border-2 border-white rounded-sm"></div>
+            </div>
+          </a>
+        </div>
       </div>
     </nav>
   );
