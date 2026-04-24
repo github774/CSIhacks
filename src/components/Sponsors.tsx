@@ -160,17 +160,10 @@ export default function Sponsors() {
       slots: [
         {
           kind: 'logo',
-          name: 'Art of Problem Solving',
-          href: 'https://artofproblemsolving.com/',
-          logo: '/sponsors/aops.svg',
-          logoClass: 'max-h-12 md:max-h-14'
-        },
-        {
-          kind: 'logo',
-          name: 'InterviewBuddy',
-          href: 'https://interviewbuddy.net/',
-          logo: '/sponsors/interviewbuddy.svg',
-          logoClass: 'max-h-10 md:max-h-12',
+          name: 'Wolfram',
+          href: 'https://www.wolfram.com/',
+          logo: '/sponsors/wolfram.svg',
+          logoClass: 'max-h-8 md:max-h-10',
           bgClass: 'bg-white hover:bg-gray-100'
         },
         {
@@ -181,6 +174,7 @@ export default function Sponsors() {
           logoClass: 'max-h-10 md:max-h-12',
           bgClass: 'bg-white hover:bg-gray-100'
         },
+        { kind: 'tba' },
         { kind: 'tba' },
         { kind: 'tba' },
         { kind: 'tba' }
