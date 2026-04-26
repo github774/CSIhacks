@@ -9,6 +9,8 @@ type SponsorSlot =
       logoClass?: string;
       bgClass?: string;
       textClass?: string;
+      captionText?: string;
+      captionClass?: string;
     }
   | { kind: 'tba' };
 
@@ -139,7 +141,17 @@ export default function Sponsors() {
           logoClass: 'max-h-10 md:max-h-12',
           bgClass: 'bg-white hover:bg-gray-100'
         },
-        { kind: 'tba' },
+        {
+          kind: 'logo',
+          name: 'Code With Purpose',
+          href: 'https://codewithpurpose.org/',
+          logo: '/sponsors/codewithpurpose.png',
+          logoClass: 'max-h-10 md:max-h-12 shrink-0',
+          bgClass: 'bg-white hover:bg-gray-100',
+          textClass: 'text-[#151515]',
+          captionText: 'Code with Purpose',
+          captionClass: 'font-mono text-base md:text-xl leading-tight text-[#151515] text-left'
+        },
         { kind: 'tba' },
         { kind: 'tba' },
         { kind: 'tba' },
@@ -288,16 +300,23 @@ export default function Sponsors() {
                           target="_blank"
                           rel="noopener noreferrer"
                           aria-label={`${slot.name} — opens in new tab`}
-                          className={`group relative ${tier.slotHeight} ${slot.bgClass ?? 'bg-[#0b0c16] hover:bg-[#0f1020]'} ${slot.textClass ?? 'text-white'} border-2 ${tier.borderClass} flex items-center justify-center px-6 transition-all duration-200 hover:-translate-y-[2px] active:translate-y-0`}
+                          className={`group relative ${tier.slotHeight} ${slot.bgClass ?? 'bg-[#0b0c16] hover:bg-[#0f1020]'} ${slot.textClass ?? 'text-white'} border-2 ${tier.borderClass} flex items-center justify-center gap-2 md:gap-3 ${slot.captionText ? 'px-3' : 'px-6'} transition-all duration-200 hover:-translate-y-[2px] active:translate-y-0`}
                         >
                           <img
                             src={slot.logo}
                             alt={slot.name}
                             className={`w-auto object-contain transition-transform duration-200 group-hover:scale-[1.03] ${slot.logoClass ?? 'max-h-12'}`}
                           />
-                          <span className="absolute bottom-2 right-3 font-mono text-[10px] text-gray-500 tracking-widest opacity-0 group-hover:opacity-100 transition-opacity">
-                            {slot.name.toUpperCase()} →
-                          </span>
+                          {slot.captionText && (
+                            <span className={slot.captionClass ?? 'font-display text-sm md:text-base tracking-tight whitespace-nowrap'}>
+                              {slot.captionText}
+                            </span>
+                          )}
+                          {!slot.captionText && (
+                            <span className="absolute bottom-2 right-3 font-mono text-[10px] text-gray-500 tracking-widest opacity-0 group-hover:opacity-100 transition-opacity">
+                              {slot.name.toUpperCase()} →
+                            </span>
+                          )}
                         </a>
                       );
                     }

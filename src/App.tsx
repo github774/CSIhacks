@@ -30,6 +30,18 @@ export default function App() {
         <Judges />
         <Schedule />
         <FAQ />
+
+        <footer className="py-10 px-6 border-t border-white/10 text-center font-mono text-sm text-gray-400">
+          Fiscally sponsored by{' '}
+          <a
+            href="https://hackclub.com/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-rose-400 hover:text-rose-300 underline underline-offset-4"
+          >
+            Hack Club
+          </a>
+        </footer>
       </motion.div>
     </div>
   );
