@@ -1,0 +1,980 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>CSIhacks · Sponsorship Prospectus</title>
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=VT323&family=Inter:wght@400;500;600;700&display=swap"
+    />
+    <style>
+      :root {
+        --bg: #0b0b1a;
+        --panel: #11122a;
+        --panel-2: #181a35;
+        --ink: #f5f6fb;
+        --muted: #c5c6d8;
+        --dim: #8a8ca8;
+        --rose: #f43f5e;
+        --rose-soft: #fb7185;
+        --cyan: #22d3ee;
+        --yellow: #facc15;
+        --green: #4ade80;
+        --emerald: #34d399;
+      }
+
+      @page {
+        size: Letter;
+        margin: 0;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      html,
+      body {
+        margin: 0;
+        padding: 0;
+        background: var(--bg);
+        color: var(--ink);
+        font-family: 'Inter', system-ui, sans-serif;
+        font-size: 11pt;
+        line-height: 1.55;
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+      }
+
+      .page {
+        width: 8.5in;
+        min-height: 11in;
+        padding: 0.6in 0.7in;
+        position: relative;
+        page-break-after: always;
+        background: var(--bg);
+        overflow: hidden;
+      }
+      .page:last-child {
+        page-break-after: auto;
+      }
+
+      /* Subtle starfield + scanline */
+      .page::before {
+        content: '';
+        position: absolute;
+        inset: 0;
+        background-image:
+          radial-gradient(rgba(255, 255, 255, 0.07) 1px, transparent 1.4px),
+          radial-gradient(rgba(255, 255, 255, 0.05) 1px, transparent 1.2px);
+        background-size: 22px 22px, 38px 38px;
+        background-position: 0 0, 11px 14px;
+        opacity: 0.6;
+        pointer-events: none;
+      }
+
+      .display {
+        font-family: 'Press Start 2P', system-ui;
+        text-transform: uppercase;
+        letter-spacing: 0.02em;
+        line-height: 1.25;
+      }
+      .mono {
+        font-family: 'VT323', monospace;
+      }
+
+      .pixel-shadow {
+        text-shadow: 4px 4px 0 var(--rose);
+      }
+      .pixel-shadow-cyan {
+        text-shadow: 3px 3px 0 var(--cyan);
+      }
+
+      /* COVER */
+      .cover {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        min-height: 11in;
+      }
+      .cover-top {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        position: relative;
+        z-index: 1;
+      }
+      .brand {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        font-family: 'Press Start 2P', system-ui;
+        font-size: 14px;
+      }
+      .brand .csi {
+        color: #fff;
+      }
+      .brand .hacks {
+        color: var(--rose);
+      }
+      .badge {
+        font-family: 'VT323', monospace;
+        font-size: 16pt;
+        color: var(--muted);
+        border: 1px solid rgba(255, 255, 255, 0.15);
+        padding: 6px 14px;
+      }
+
+      .cover-center {
+        position: relative;
+        z-index: 1;
+      }
+      .cover-eyebrow {
+        font-family: 'VT323', monospace;
+        font-size: 18pt;
+        color: var(--rose-soft);
+        margin-bottom: 12px;
+      }
+      .cover-title {
+        font-family: 'Press Start 2P', system-ui;
+        font-size: 42pt;
+        line-height: 1.05;
+        color: #fff;
+        text-shadow: 6px 6px 0 var(--rose);
+        margin: 0 0 28px;
+        text-transform: uppercase;
+      }
+      .cover-sub {
+        font-family: 'VT323', monospace;
+        font-size: 22pt;
+        color: var(--muted);
+        max-width: 6.2in;
+      }
+      .cover-meta {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 18px;
+        margin-top: 38px;
+      }
+      .meta-card {
+        border: 2px solid rgba(244, 63, 94, 0.5);
+        background: rgba(17, 18, 42, 0.7);
+        padding: 14px 16px;
+      }
+      .meta-card .k {
+        font-family: 'Press Start 2P', system-ui;
+        font-size: 8pt;
+        color: var(--rose-soft);
+        letter-spacing: 0.06em;
+        margin-bottom: 8px;
+      }
+      .meta-card .v {
+        font-family: 'VT323', monospace;
+        font-size: 18pt;
+        color: #fff;
+        line-height: 1.1;
+      }
+
+      .cover-foot {
+        position: relative;
+        z-index: 1;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        font-family: 'VT323', monospace;
+        color: var(--dim);
+        font-size: 14pt;
+      }
+      .cover-foot a {
+        color: var(--rose-soft);
+        text-decoration: none;
+      }
+
+      /* BODY PAGES */
+      .section-eyebrow {
+        font-family: 'VT323', monospace;
+        font-size: 16pt;
+        color: var(--rose-soft);
+      }
+      h1.section {
+        font-family: 'Press Start 2P', system-ui;
+        font-size: 22pt;
+        color: #fff;
+        margin: 4px 0 22px;
+        line-height: 1.15;
+        text-transform: uppercase;
+      }
+      h2 {
+        font-family: 'Press Start 2P', system-ui;
+        font-size: 11pt;
+        color: var(--rose);
+        text-transform: uppercase;
+        letter-spacing: 0.04em;
+        margin: 22px 0 10px;
+      }
+      h3 {
+        font-family: 'Press Start 2P', system-ui;
+        font-size: 9pt;
+        color: var(--cyan);
+        text-transform: uppercase;
+        letter-spacing: 0.04em;
+        margin: 18px 0 8px;
+      }
+      p {
+        margin: 0 0 12px;
+        color: var(--muted);
+      }
+
+      .stat-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 14px;
+        margin: 6px 0 20px;
+      }
+      .stat {
+        border: 2px solid rgba(255, 255, 255, 0.12);
+        background: rgba(17, 18, 42, 0.7);
+        padding: 14px;
+      }
+      .stat .num {
+        font-family: 'Press Start 2P', system-ui;
+        font-size: 18pt;
+        color: var(--rose);
+      }
+      .stat .lbl {
+        font-family: 'VT323', monospace;
+        font-size: 13pt;
+        color: var(--muted);
+        margin-top: 6px;
+      }
+
+      .pillars {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 14px;
+      }
+      .pillar {
+        border: 2px solid rgba(255, 255, 255, 0.1);
+        background: rgba(17, 18, 42, 0.7);
+        padding: 14px 16px;
+      }
+      .pillar h3 {
+        margin-top: 0;
+      }
+
+      /* TIER TABLE */
+      .tiers {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 10px;
+        margin-top: 6px;
+      }
+      .tier {
+        border: 2px solid;
+        background: rgba(11, 12, 22, 0.85);
+        padding: 12px 12px 14px;
+      }
+      .tier .name {
+        font-family: 'Press Start 2P', system-ui;
+        font-size: 10pt;
+        letter-spacing: 0.05em;
+        margin-bottom: 6px;
+      }
+      .tier .price {
+        font-family: 'Press Start 2P', system-ui;
+        font-size: 14pt;
+        color: #fff;
+        margin-bottom: 4px;
+      }
+      .tier .price.small {
+        font-size: 9pt;
+        line-height: 1.3;
+      }
+      .tier .slots {
+        font-family: 'VT323', monospace;
+        font-size: 13pt;
+        color: var(--dim);
+      }
+      .tier.supporter {
+        border-color: rgba(52, 211, 153, 0.55);
+      }
+      .tier.supporter .name {
+        color: var(--emerald);
+      }
+      .tier.silver {
+        border-color: rgba(209, 213, 219, 0.55);
+      }
+      .tier.silver .name {
+        color: #e5e7eb;
+      }
+      .tier.gold {
+        border-color: rgba(250, 204, 21, 0.6);
+      }
+      .tier.gold .name {
+        color: var(--yellow);
+      }
+      .tier.diamond {
+        border-color: rgba(34, 211, 238, 0.6);
+      }
+      .tier.diamond .name {
+        color: var(--cyan);
+      }
+
+      table.benefits {
+        width: 100%;
+        border-collapse: collapse;
+        margin-top: 14px;
+        background: rgba(17, 18, 42, 0.6);
+        border: 2px solid rgba(255, 255, 255, 0.1);
+      }
+      table.benefits thead th {
+        font-family: 'Press Start 2P', system-ui;
+        font-size: 8pt;
+        letter-spacing: 0.04em;
+        padding: 10px 8px;
+        text-align: center;
+        background: rgba(8, 9, 20, 0.85);
+        border-bottom: 2px solid rgba(255, 255, 255, 0.12);
+      }
+      table.benefits thead th.benefit-col {
+        text-align: left;
+        color: #fff;
+        width: 36%;
+      }
+      table.benefits thead th .pcol {
+        font-family: 'VT323', monospace;
+        font-size: 12pt;
+        color: var(--muted);
+        display: block;
+        margin-top: 4px;
+        font-weight: normal;
+      }
+      table.benefits th.col-supporter {
+        color: var(--emerald);
+      }
+      table.benefits th.col-silver {
+        color: #e5e7eb;
+      }
+      table.benefits th.col-gold {
+        color: var(--yellow);
+      }
+      table.benefits th.col-diamond {
+        color: var(--cyan);
+      }
+      table.benefits td {
+        padding: 9px 8px;
+        text-align: center;
+        font-family: 'VT323', monospace;
+        font-size: 13pt;
+        color: var(--muted);
+        border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+      }
+      table.benefits td.b {
+        text-align: left;
+        color: #fff;
+      }
+      table.benefits tr:last-child td {
+        border-bottom: none;
+      }
+      .check {
+        display: inline-block;
+        width: 14px;
+        height: 14px;
+        line-height: 14px;
+        text-align: center;
+        border-radius: 50%;
+        font-size: 9pt;
+        color: #080914;
+        font-weight: 700;
+      }
+      .check.s {
+        background: var(--emerald);
+      }
+      .check.si {
+        background: #e5e7eb;
+      }
+      .check.g {
+        background: var(--yellow);
+      }
+      .check.d {
+        background: var(--cyan);
+      }
+      .em {
+        color: #fff;
+        font-weight: 600;
+      }
+
+      .callout {
+        margin-top: 18px;
+        border: 2px dashed rgba(244, 63, 94, 0.55);
+        padding: 14px 18px;
+        background: rgba(244, 63, 94, 0.06);
+      }
+      .callout .label {
+        font-family: 'Press Start 2P', system-ui;
+        font-size: 9pt;
+        color: var(--rose);
+        text-transform: uppercase;
+        letter-spacing: 0.05em;
+        margin-bottom: 6px;
+      }
+      .callout .body {
+        font-family: 'VT323', monospace;
+        font-size: 16pt;
+        color: var(--ink);
+        line-height: 1.35;
+      }
+
+      ul.bullets {
+        margin: 4px 0 12px;
+        padding-left: 18px;
+      }
+      ul.bullets li {
+        color: var(--muted);
+        margin-bottom: 6px;
+      }
+      ul.bullets li strong {
+        color: #fff;
+      }
+
+      .cta {
+        display: grid;
+        grid-template-columns: 1.4fr 1fr;
+        gap: 18px;
+        margin-top: 18px;
+      }
+      .cta .panel {
+        border: 2px solid rgba(255, 255, 255, 0.12);
+        background: rgba(17, 18, 42, 0.7);
+        padding: 18px 20px;
+      }
+      .cta h3 {
+        margin-top: 0;
+      }
+      .cta a.email {
+        font-family: 'VT323', monospace;
+        font-size: 18pt;
+        color: var(--rose-soft);
+        text-decoration: none;
+      }
+
+      .footer {
+        position: absolute;
+        bottom: 0.4in;
+        left: 0.7in;
+        right: 0.7in;
+        display: flex;
+        justify-content: space-between;
+        font-family: 'VT323', monospace;
+        font-size: 12pt;
+        color: var(--dim);
+      }
+      .footer a {
+        color: var(--rose-soft);
+        text-decoration: none;
+      }
+
+      .lede {
+        font-family: 'VT323', monospace;
+        font-size: 17pt;
+        line-height: 1.4;
+        color: #fff;
+        margin: 0 0 18px;
+      }
+
+      .commit-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 12px;
+        margin-top: 6px;
+      }
+      .commit-card {
+        border: 2px solid;
+        background: rgba(11, 12, 22, 0.85);
+        padding: 12px 14px;
+      }
+      .commit-card.supporter {
+        border-color: rgba(52, 211, 153, 0.55);
+      }
+      .commit-card.silver {
+        border-color: rgba(209, 213, 219, 0.5);
+      }
+      .commit-card.gold {
+        border-color: rgba(250, 204, 21, 0.55);
+      }
+      .commit-card.diamond {
+        border-color: rgba(34, 211, 238, 0.55);
+      }
+      .commit-tier {
+        font-family: 'Press Start 2P', system-ui;
+        font-size: 10pt;
+        letter-spacing: 0.05em;
+        margin-bottom: 6px;
+      }
+      .commit-card.supporter .commit-tier {
+        color: var(--emerald);
+      }
+      .commit-card.silver .commit-tier {
+        color: #e5e7eb;
+      }
+      .commit-card.gold .commit-tier {
+        color: var(--yellow);
+      }
+      .commit-card.diamond .commit-tier {
+        color: var(--cyan);
+      }
+      .commit-line {
+        font-family: 'VT323', monospace;
+        font-size: 14pt;
+        color: #fff;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+        padding-bottom: 6px;
+        margin-bottom: 8px;
+      }
+      ul.commit-bullets {
+        margin: 0;
+        padding-left: 18px;
+        font-family: 'VT323', monospace;
+        font-size: 13pt;
+        line-height: 1.35;
+        color: var(--muted);
+      }
+      ul.commit-bullets li {
+        margin-bottom: 3px;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- ============== COVER ============== -->
+    <section class="page cover">
+      <div class="cover-top">
+        <div class="brand">
+          <span class="csi">CSI</span><span class="hacks">hacks</span>
+        </div>
+        <div class="badge">SPONSORSHIP · 2026</div>
+      </div>
+
+      <div class="cover-center">
+        <div class="cover-eyebrow">$ cat sponsorship.md</div>
+        <h1 class="cover-title">Sponsorship<br />Prospectus</h1>
+        <p class="cover-sub">
+          A one-day, in-person hackathon for the next generation of builders —
+          high-school and early-college students who ship real projects and
+          want partners who'll meet them where they're going.
+        </p>
+
+        <div class="cover-meta">
+          <div class="meta-card">
+            <div class="k">Date</div>
+            <div class="v">June 27, 2026</div>
+          </div>
+          <div class="meta-card">
+            <div class="k">Venue</div>
+            <div class="v">Zoho Corp.<br />Pleasanton, CA</div>
+          </div>
+          <div class="meta-card">
+            <div class="k">Format</div>
+            <div class="v">12-hour<br />in-person sprint</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="cover-foot">
+        <span>Powered by California Stem Innovators · Fiscally sponsored by Hack Club</span>
+        <a href="mailto:stemcalifornia@gmail.com">stemcalifornia@gmail.com</a>
+      </div>
+    </section>
+
+    <!-- ============== ABOUT ============== -->
+    <section class="page">
+      <div class="section-eyebrow">$ ./about</div>
+      <h1 class="section">What is CSIhacks?</h1>
+
+      <p class="lede">
+        CSIhacks is a high-school hackathon built around five tracks — Best
+        Overall, Best AI/ML, Best Fintech, Best Hardware, and Best UI/UX. One
+        day. One room. Real projects, real judges, real prizes.
+      </p>
+
+      <div class="stat-grid">
+        <div class="stat">
+          <div class="num">100+</div>
+          <div class="lbl">Expected hackers, on-site</div>
+        </div>
+        <div class="stat">
+          <div class="num">12 hrs</div>
+          <div class="lbl">Build time + judging + ceremony</div>
+        </div>
+        <div class="stat">
+          <div class="num">5</div>
+          <div class="lbl">Project tracks for prizes</div>
+        </div>
+      </div>
+
+      <h2>Who shows up</h2>
+      <div class="pillars">
+        <div class="pillar">
+          <h3>The Hackers</h3>
+          <p>
+            High-school and early-college students from across the Bay Area —
+            self-taught coders, robotics-club kids, AoPS regulars, and first-time
+            builders looking for a starting line.
+          </p>
+        </div>
+        <div class="pillar">
+          <h3>The Mentors & Judges</h3>
+          <p>
+            Working engineers, founders, and educators rotating between teams,
+            unsticking projects, and judging final demos. Sponsors are invited
+            to send their own.
+          </p>
+        </div>
+        <div class="pillar">
+          <h3>The Backers</h3>
+          <p>
+            Run by California Stem Innovators (501(c)(3) sponsorship via Hack
+            Club), with backing from companies like CodeCrafters, PCBWay,
+            Featherless, Wolfram, and Tavily.
+          </p>
+        </div>
+        <div class="pillar">
+          <h3>The Vibe</h3>
+          <p>
+            Pixel art, late-night soldering, espresso, and a closing ceremony
+            that actually feels like one. Students leave with shipped projects
+            in their portfolio and a network they didn't have that morning.
+          </p>
+        </div>
+      </div>
+
+      <div class="footer">
+        <span>CSIhacks · Sponsorship Prospectus</span>
+        <span>Page 2</span>
+      </div>
+    </section>
+
+    <!-- ============== WHY SPONSOR ============== -->
+    <section class="page">
+      <div class="section-eyebrow">$ ./why-sponsor</div>
+      <h1 class="section">Why sponsor CSIhacks?</h1>
+
+      <p class="lede">
+        Hackathons are recruiting funnels, product feedback labs, and brand
+        moments — all in one room. Sponsoring CSIhacks puts you in front of a
+        cohort that's about to enter your hiring pipeline, your dev community,
+        and your customer base.
+      </p>
+
+      <div class="pillars">
+        <div class="pillar">
+          <h3>1. Talent pipeline</h3>
+          <p>
+            Meet ambitious high-schoolers years before they're on the market.
+            Send recruiters, mentors, and judges; collect résumés directly.
+          </p>
+        </div>
+        <div class="pillar">
+          <h3>2. Real product feedback</h3>
+          <p>
+            See your APIs, SDKs, and tools used by motivated developers in real
+            time — and watch what breaks. The bug reports alone are worth it.
+          </p>
+        </div>
+        <div class="pillar">
+          <h3>3. Brand moments</h3>
+          <p>
+            Logo on-site, on the website, on shirts, in slides, on stage. Your
+            name shows up where the hackers are paying attention.
+          </p>
+        </div>
+        <div class="pillar">
+          <h3>4. Community goodwill</h3>
+          <p>
+            Sponsoring student hackathons buys long-tail goodwill. The students
+            you back today are the engineers who'll champion you in five years.
+          </p>
+        </div>
+      </div>
+
+      <h2>What we'll do for you</h2>
+      <ul class="bullets">
+        <li><strong>On-stage moments:</strong> opening welcome, closing remarks, or a keynote, depending on tier.</li>
+        <li><strong>Custom tracks &amp; awards:</strong> design a prize that maps to your product or community.</li>
+        <li><strong>Tabling space:</strong> set up a booth, demo your tools, hand out swag, run side-quests.</li>
+        <li><strong>Recruitment access:</strong> distribute materials, collect résumés, send engineers as mentors and judges.</li>
+        <li><strong>Brand placement:</strong> logo on the website, on event shirts, in the deck, in post-event recap.</li>
+      </ul>
+
+      <h2>The tiers, at a glance</h2>
+      <div class="tiers">
+        <div class="tier supporter">
+          <div class="name">Supporter</div>
+          <div class="price small">Products, credits<br/>&amp; services</div>
+          <div class="slots">In-kind contribution</div>
+        </div>
+        <div class="tier silver">
+          <div class="name">Silver</div>
+          <div class="price">$500</div>
+          <div class="slots">8 slots</div>
+        </div>
+        <div class="tier gold">
+          <div class="name">Gold</div>
+          <div class="price">$750</div>
+          <div class="slots">6 slots</div>
+        </div>
+        <div class="tier diamond">
+          <div class="name">Diamond</div>
+          <div class="price">$1,500</div>
+          <div class="slots">4 slots</div>
+        </div>
+      </div>
+
+      <div class="callout">
+        <div class="label">Tailored Sponsorship</div>
+        <div class="body">
+          Don't see a tier that fits? We're a small, founder-led team — message
+          us and we'll design a custom package around what your team actually
+          needs. Products, credits, services, in-kind, and cash all welcome.
+        </div>
+      </div>
+
+      <div class="footer">
+        <span>CSIhacks · Sponsorship Prospectus</span>
+        <span>Page 3</span>
+      </div>
+    </section>
+
+    <!-- ============== COMMITMENT & INVOLVEMENT ============== -->
+    <section class="page">
+      <div class="section-eyebrow">$ ./commitment</div>
+      <h1 class="section">Commitment &amp; Involvement</h1>
+
+      <p class="lede">
+        Each tier comes with a baseline commitment and an expected level of
+        involvement. Below is the default — we'll happily customize around what
+        your team can give and what you want to get out of being there.
+      </p>
+
+      <div class="commit-grid">
+        <div class="commit-card supporter">
+          <div class="commit-tier">Supporter</div>
+          <div class="commit-line">In-kind: products, credits, or services</div>
+          <ul class="commit-bullets">
+            <li>Provide your product or credits to participants</li>
+            <li>Optional: send a mentor for a session or two</li>
+            <li>Allow us to distribute your materials at check-in</li>
+            <li>Logo and short blurb on the event site</li>
+          </ul>
+        </div>
+        <div class="commit-card silver">
+          <div class="commit-tier">Silver</div>
+          <div class="commit-line">$500 cash or equivalent</div>
+          <ul class="commit-bullets">
+            <li>Send at least one judge for final demos (~1 hour)</li>
+            <li>Optional: 1–2 engineers as mentors during the build</li>
+            <li>Distribute swag, stickers, or recruiting materials</li>
+            <li>2-minute spotlight at opening or closing</li>
+            <li>Logo on website and ceremony slides</li>
+          </ul>
+        </div>
+        <div class="commit-card gold">
+          <div class="commit-tier">Gold</div>
+          <div class="commit-line">$750 cash or equivalent</div>
+          <ul class="commit-bullets">
+            <li>Run a sponsor table on-site — we provide table + power</li>
+            <li>Send 2–3 mentors and at least one judge</li>
+            <li>Sponsor a custom award (we'll co-design with you)</li>
+            <li>5-minute stage moment in the closing ceremony</li>
+            <li>Logo on website, ceremony slides, and event shirts</li>
+            <li>Recruiting access — collect résumés on-site</li>
+          </ul>
+        </div>
+        <div class="commit-card diamond">
+          <div class="commit-tier">Diamond</div>
+          <div class="commit-line">$1,500 cash or equivalent</div>
+          <ul class="commit-bullets">
+            <li>Title a custom project track (co-designed with us)</li>
+            <li>Run a sponsor table on-site, all day</li>
+            <li>Send a team of mentors plus at least one judge</li>
+            <li>Sponsor a custom award and present it on stage</li>
+            <li>Keynote slot at opening or closing ceremony</li>
+            <li>Top-billed logo on site, slides, and event shirts</li>
+            <li>Direct recruiting access (opt-in résumé share)</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer">
+        <span>CSIhacks · Sponsorship Prospectus</span>
+        <span>Page 4</span>
+      </div>
+    </section>
+
+    <!-- ============== TIERS ============== -->
+    <section class="page">
+      <div class="section-eyebrow">$ ./benefits</div>
+      <h1 class="section">Detailed Benefits Matrix</h1>
+
+      <p class="lede">
+        Side-by-side breakdown of what each tier includes. Use this as a
+        reference — we can mix and match if a specific row matters more than the
+        rest.
+      </p>
+
+      <table class="benefits">
+        <thead>
+          <tr>
+            <th class="benefit-col">Benefits</th>
+            <th class="col-supporter">Supporter<span class="pcol">In-kind</span></th>
+            <th class="col-silver">Silver<span class="pcol">$500</span></th>
+            <th class="col-gold">Gold<span class="pcol">$750</span></th>
+            <th class="col-diamond">Diamond<span class="pcol">$1,500</span></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="b">Sponsor table on-site</td>
+            <td>—</td>
+            <td>—</td>
+            <td><span class="check g">✓</span></td>
+            <td><span class="check d">✓</span></td>
+          </tr>
+          <tr>
+            <td class="b">Send engineers / mentors</td>
+            <td><span class="check s">✓</span></td>
+            <td><span class="check si">✓</span></td>
+            <td><span class="check g">✓</span></td>
+            <td><span class="check d">✓</span></td>
+          </tr>
+          <tr>
+            <td class="b">Send judges</td>
+            <td>—</td>
+            <td><span class="check si">✓</span></td>
+            <td><span class="check g">✓</span></td>
+            <td><span class="check d">✓</span></td>
+          </tr>
+          <tr>
+            <td class="b">Distribute sponsorship materials</td>
+            <td><span class="check s">✓</span></td>
+            <td><span class="check si">✓</span></td>
+            <td><span class="check g">✓</span></td>
+            <td><span class="check d">✓</span></td>
+          </tr>
+          <tr>
+            <td class="b">Custom project track</td>
+            <td>—</td>
+            <td>—</td>
+            <td>—</td>
+            <td><span class="check d">✓</span></td>
+          </tr>
+          <tr>
+            <td class="b">Custom award</td>
+            <td>—</td>
+            <td>—</td>
+            <td><span class="check g">✓</span></td>
+            <td><span class="check d">✓</span></td>
+          </tr>
+          <tr>
+            <td class="b">Present at opening / closing ceremony</td>
+            <td>—</td>
+            <td><span class="em">2 min</span></td>
+            <td><span class="em">5 min</span></td>
+            <td><span class="em">Keynote</span></td>
+          </tr>
+          <tr>
+            <td class="b">Logo on website &amp; presentations</td>
+            <td><span class="check s">✓</span></td>
+            <td><span class="check si">✓</span></td>
+            <td><span class="check g">✓</span></td>
+            <td><span class="check d">✓</span></td>
+          </tr>
+          <tr>
+            <td class="b">Logo on event shirts</td>
+            <td>—</td>
+            <td>—</td>
+            <td><span class="check g">✓</span></td>
+            <td><span class="check d">✓</span></td>
+          </tr>
+        </tbody>
+      </table>
+
+      <div class="callout">
+        <div class="label">Negotiable</div>
+        <div class="body">
+          You can always negotiate and design your own tier. Just ask —
+          stemcalifornia@gmail.com.
+        </div>
+      </div>
+
+      <div class="footer">
+        <span>CSIhacks · Sponsorship Prospectus</span>
+        <span>Page 5</span>
+      </div>
+    </section>
+
+    <!-- ============== CONTACT / NEXT STEPS ============== -->
+    <section class="page">
+      <div class="section-eyebrow">$ ./next-steps</div>
+      <h1 class="section">Let's Talk</h1>
+
+      <p class="lede">
+        If any of this resonates, the next step is a 15-minute conversation. We
+        move fast, paperwork is light (we run through Hack Club's fiscal
+        sponsorship — a 501(c)(3) flow), and we'll tailor a package around what
+        actually matters to your team.
+      </p>
+
+      <div class="cta">
+        <div class="panel">
+          <h3>How to start</h3>
+          <p>
+            Email us with a one-liner about who you are and what you're hoping
+            to get out of sponsoring. We'll reply with a tier recommendation and
+            a quick scheduling link. From there: contract, invoice, and you're
+            in.
+          </p>
+          <a class="email" href="mailto:stemcalifornia@gmail.com"
+            >stemcalifornia@gmail.com</a
+          >
+        </div>
+        <div class="panel">
+          <h3>Quick facts</h3>
+          <p>
+            <strong style="color:#fff">Date:</strong> June 27, 2026<br />
+            <strong style="color:#fff">Venue:</strong> Zoho, Pleasanton, CA<br />
+            <strong style="color:#fff">Org:</strong> California Stem Innovators<br />
+            <strong style="color:#fff">Fiscal sponsor:</strong> Hack Club
+            (501(c)(3))<br />
+            <strong style="color:#fff">Web:</strong> csihacks.com
+          </p>
+        </div>
+      </div>
+
+      <h2>Confirmed sponsors</h2>
+      <p>
+        CodeCrafters · PCBWay · Featherless.ai · Wolfram · Tavily · Code With
+        Purpose — and growing.
+      </p>
+
+      <h2>Tax &amp; logistics</h2>
+      <p>
+        CSIhacks operates under Hack Club's 501(c)(3) fiscal sponsorship — your
+        contribution is tax-deductible in the U.S. We can issue a receipt the
+        same day funds clear. Wire, ACH, check, and card all welcome.
+      </p>
+
+      <div class="callout">
+        <div class="label">Thank you</div>
+        <div class="body">
+          Sponsoring a student hackathon isn't a transaction — it's a vote that
+          the next generation gets to build. We don't take that lightly. See
+          you on June 27.
+        </div>
+      </div>
+
+      <div class="footer">
+        <span>CSIhacks · Sponsorship Prospectus</span>
+        <span>Page 6</span>
+      </div>
+    </section>
+  </body>
+</html>

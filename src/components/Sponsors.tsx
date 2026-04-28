@@ -273,9 +273,24 @@ export default function Sponsors() {
           <h2 className="text-4xl md:text-6xl font-display text-center mb-6 text-fuchsia-400 pixel-shadow">
             SPONSORS
           </h2>
-          <p className="text-center font-mono text-gray-400 mb-20 max-w-2xl mx-auto text-lg">
+          <p className="text-center font-mono text-gray-400 mb-8 max-w-2xl mx-auto text-lg">
             Powered by the companies building what's next. More to come.
           </p>
+
+          <div className="flex justify-center mb-20">
+            <a
+              href="/sponsorship-prospectus.pdf"
+              download="CSIhacks-Sponsorship-Prospectus.pdf"
+              className="group inline-flex items-center gap-3 bg-fuchsia-500 hover:bg-fuchsia-400 text-white font-display text-xs md:text-sm px-5 py-3 md:px-6 md:py-3.5 transition-colors"
+            >
+              <svg viewBox="0 0 24 24" aria-hidden="true" className="w-4 h-4 md:w-5 md:h-5" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="square" strokeLinejoin="miter">
+                <path d="M12 4v12" />
+                <path d="M6 12l6 6 6-6" />
+                <path d="M4 20h16" />
+              </svg>
+              SPONSORSHIP PROSPECTUS
+            </a>
+          </div>
 
           <div className="space-y-16">
             {tiers.map((tier) => (
