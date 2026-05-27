@@ -48,7 +48,7 @@ export default function About() {
             <div className="absolute top-0 right-0 p-2 text-yellow-500 opacity-50 text-sm">03</div>
             <h3 className="text-2xl font-display text-yellow-400 mb-4 tracking-tighter">MAKE BREAD</h3>
             <p className="text-gray-400 font-mono text-lg leading-relaxed pt-4 border-t border-white/10">
-              Compete with hundreds of hackers for prizes. Walk home with free swag, snacks, and a great time.
+              Compete for more than $1,000 in prizes, including cash. Walk home with free swag, snacks, and a great time.
             </p>
           </div>
 

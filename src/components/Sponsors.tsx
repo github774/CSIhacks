@@ -1,4 +1,4 @@
-import { Star, Brain, DollarSign, Cpu, Palette, Check } from 'lucide-react';
+import { Star, Brain, DollarSign, Cpu, Palette, Check, Trophy, Medal } from 'lucide-react';
 
 type SponsorSlot =
   | {
@@ -40,33 +40,33 @@ export default function Sponsors() {
   const tracks = [
     {
       id: '01',
-      title: 'Best Overall',
-      description: "The grand prize. Show us something we've never seen before — the project that makes judges forget about every other demo.",
-      icon: <Star className="w-6 h-6 text-rose-500" />
+      title: '1st Place',
+      description: "The absolute best project at CSIhacks. Judged on innovation, technical complexity, and impact.",
+      icon: <Trophy className="w-6 h-6 text-yellow-400" />
     },
     {
       id: '02',
-      title: 'Best AI/ML',
-      description: 'Push the boundaries of machine intelligence. From fine-tuned models to novel architectures — build something that thinks.',
-      icon: <Brain className="w-6 h-6 text-cyan-400" />
+      title: '2nd Place',
+      description: 'An exceptional project that stood out for its execution and creativity.',
+      icon: <Medal className="w-6 h-6 text-gray-300" />
     },
     {
       id: '03',
-      title: 'Best Fintech',
-      description: 'Reimagine money, payments, or financial access. Build tools that make the financial world more open, fair, or efficient.',
-      icon: <DollarSign className="w-6 h-6 text-yellow-400" />
+      title: '3rd Place',
+      description: 'A high-quality project that demonstrated great potential and skill.',
+      icon: <Medal className="w-6 h-6 text-orange-400" />
     },
     {
       id: '04',
       title: 'Best Hardware',
-      description: 'Atoms over bits. Bring circuits, sensors, and physical builds. If it blinks, moves, or measures — we want to see it.',
+      description: 'Atoms over bits. For the best project involving physical components, circuits, or sensors.',
       icon: <Cpu className="w-6 h-6 text-fuchsia-400" />
     },
     {
       id: '05',
-      title: 'Best UI/UX Design',
-      description: 'Where form meets function. Build a seamless user experience with intuitive design and exceptional aesthetics.',
-      icon: <Palette className="w-6 h-6 text-green-400" />
+      title: 'Most Innovative',
+      description: 'For the project that took the most unique approach or solved a problem in a completely new way.',
+      icon: <Brain className="w-6 h-6 text-cyan-400" />
     }
   ];
 
@@ -217,11 +217,11 @@ export default function Sponsors() {
         {/* Tracks Section */}
         <div>
           <div className="text-center mb-16">
-            <h2 className="text-5xl md:text-7xl font-display mb-6 text-white pixel-shadow">
-              FIVE WAYS TO WIN.
+            <h2 className="text-5xl md:text-7xl font-display mb-6 text-white pixel-shadow uppercase">
+              $1,000+ IN PRIZES.
             </h2>
             <p className="text-xl md:text-2xl text-rose-300 font-mono italic max-w-2xl mx-auto">
-              Pick a track that excites you. Every project competes for Best Overall too.
+              Compete for cash and other high-value awards. Choose from our specialized tracks or aim for the top spots.
             </p>
           </div>
 

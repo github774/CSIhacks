@@ -1,7 +1,7 @@
 import { useState } from 'react';
 
 const faqs = [
-  { question: "What is this?", answer: "CSIhacks is a 12-hour hackathon where students come together to build innovative software and hardware projects, learn new skills, and compete for prizes." },
+  { question: "What is this?", answer: "CSIhacks is a 12-hour hackathon where students come together to build innovative software and hardware projects, learn new skills, and compete for more than $1,000 in prizes, including cash." },
   { question: "Who can participate?", answer: "Any high school student is welcome to participate! No prior coding experience is required." },
   { question: "What should I bring?", answer: "Bring your laptop, charger, student ID, and a lot of enthusiasm! We'll provide the food, drinks, and swag." },
   { question: "How much does it cost?", answer: "Nothing! CSIhacks is completely free for all attendees." },
