@@ -1,3 +1,5 @@
+import { ReactNode } from 'react';
+
 export default function CodeOfConduct() {
   return (
     <div className="min-h-screen star-bg text-gray-200 font-sans">
@@ -33,7 +35,7 @@ export default function CodeOfConduct() {
             Anti-Harassment Policy
           </h2>
           <p className="font-mono text-gray-400 text-base mb-12">
-            Effective: June 27th, 2026 &bull; csihacks.com
+            Effective: July 18th, 2026 &bull; csihacks.com
           </p>
 
           <div className="space-y-10 font-mono text-lg leading-relaxed">
@@ -208,7 +210,7 @@ export default function CodeOfConduct() {
   );
 }
 
-function Section({ title, children }: { title: string; children: React.ReactNode }) {
+function Section({ title, children }: { title: string; children: ReactNode }) {
   return (
     <div>
       <h2 className="font-display text-base md:text-lg text-cyan-400 mb-4 border-b border-cyan-400/30 pb-2">
@@ -219,7 +221,7 @@ function Section({ title, children }: { title: string; children: React.ReactNode
   );
 }
 
-function SubSection({ title, children }: { title: string; children: React.ReactNode }) {
+function SubSection({ title, children }: { title: string; children: ReactNode }) {
   return (
     <div className="mb-6">
       <h3 className="font-display text-xs md:text-sm text-rose-400 mb-3">{title}</h3>
@@ -228,7 +230,7 @@ function SubSection({ title, children }: { title: string; children: React.ReactN
   );
 }
 
-function BulletItem({ children }: { children: React.ReactNode }) {
+function BulletItem({ children }: { children: ReactNode }) {
   return (
     <li className="flex gap-3">
       <span className="text-rose-500 mt-0.5 shrink-0">&gt;</span>
@@ -237,7 +239,7 @@ function BulletItem({ children }: { children: React.ReactNode }) {
   );
 }
 
-function NumberedItem({ n, children }: { n: number; children: React.ReactNode }) {
+function NumberedItem({ n, children }: { n: number; children: ReactNode }) {
   return (
     <li className="flex gap-3">
       <span className="text-cyan-400 shrink-0">{n}.</span>
