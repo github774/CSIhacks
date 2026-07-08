@@ -1,13 +1,13 @@
 const scheduleItems = [
-  { event: "Registration & Check-in", time: "8:00 AM", date: "Jul 18" },
-  { event: "Opening Ceremony", time: "8:30 AM", date: "Jul 18" },
-  { event: "Hacking Begins!", time: "9:00 AM", date: "Jul 18" },
-  { event: "Workshop - How to Win Hackathons", time: "10:00 AM", date: "Jul 18" },
-  { event: "Lunch Break", time: "12:00 PM", date: "Jul 18" },
-  { event: "Workshop - Intro to APIs", time: "1:00 PM", date: "Jul 18" },
-  { event: "Submissions Due / Dinner", time: "6:00 PM", date: "Jul 18" },
-  { event: "Judging", time: "6:30 PM", date: "Jul 18" },
-  { event: "Awards Ceremony", time: "8:30 PM", date: "Jul 18" },
+  { event: "Registration & Check-in", time: "8:00 AM", date: "Jul 25" },
+  { event: "Opening Ceremony", time: "8:30 AM", date: "Jul 25" },
+  { event: "Hacking Begins!", time: "9:00 AM", date: "Jul 25" },
+  { event: "Workshop - How to Win Hackathons", time: "10:00 AM", date: "Jul 25" },
+  { event: "Lunch Break", time: "12:00 PM", date: "Jul 25" },
+  { event: "Workshop - Intro to APIs", time: "1:00 PM", date: "Jul 25" },
+  { event: "Submissions Due / Dinner", time: "6:00 PM", date: "Jul 25" },
+  { event: "Judging", time: "6:30 PM", date: "Jul 25" },
+  { event: "Awards Ceremony", time: "8:30 PM", date: "Jul 25" },
 ];
 
 export default function Schedule() {
