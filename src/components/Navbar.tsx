@@ -38,7 +38,7 @@ export default function Navbar() {
         {/* Right-side cluster: Discord + Donate + Powered by CSI */}
         <div className="flex items-center gap-3 md:gap-4 lg:gap-6">
           <a
-            href="https://discord.gg/K6MDc5Pa"
+            href="https://discord.gg/6pewD5rdAx"
             target="_blank"
             rel="noopener noreferrer"
             aria-label="Join CSIhacks Discord — opens in new tab"
